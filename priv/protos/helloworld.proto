@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Request {
+  string message = 1;
+}
+
+message Reply {
+  string response = 1;
+}
+
+service Kolombia {
+  rpc HandleEvent (Request) returns (Reply) {}
+}
