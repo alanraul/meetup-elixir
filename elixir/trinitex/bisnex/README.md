@@ -10,8 +10,6 @@ def deps do
 end
 ```
 
-## Development.
-
 ### Comandos útiles.
 
 - __make gen_proto file="filename"__: Genera un archivo .pb.ex simple.

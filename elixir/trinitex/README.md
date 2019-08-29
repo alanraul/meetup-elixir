@@ -3,5 +3,5 @@
 ![Trinitex](image.jpg)
 
 - Dealer ([Servidor](./dealer))
-- Conectex ([Cliente](./dealer))
-- Bisnex ([Protos](./dealer))
+- Conectex ([Cliente](./conectex))
+- Bisnex ([Protos](./bisnex))
