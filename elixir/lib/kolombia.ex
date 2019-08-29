@@ -11,7 +11,6 @@ defmodule Kolombia do
   """
   @spec start :: {:ok, GRPC.Channel.t} | {:error, any}
   def start do
-    IO.inspect("#{_host()}:#{_port()}")
     Stub.connect("#{_host()}:#{_port()}", [interceptors: [Logger.Client]])
   end
 
