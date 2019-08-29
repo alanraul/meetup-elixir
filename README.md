@@ -1,6 +1,6 @@
 # Meetup Elixir
 
-![Meetup](https://pbs.twimg.com/media/EBU3sj-XsAUuQ4S?format=jpg&name=small)
+[![Meetup](https://pbs.twimg.com/media/EBU3sj-XsAUuQ4S?format=jpg&name=small)](https://docs.google.com/presentation/d/1k-b0ZyorMEVCmatgjKGxjrP-eQQeaLbyivJCQNqeDy8/edit#slide=id.p3)
 
 ### Configurar variables de entorno.
 
