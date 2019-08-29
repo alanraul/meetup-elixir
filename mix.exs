@@ -3,11 +3,11 @@ defmodule Kolombia.MixProject do
 
   def project do
     [
-      app: :kolombia,
-      version: "0.1.0",
-      elixir: "~> 1.8",
-      start_permanent: Mix.env() == :prod,
-      deps: deps()
+      app:                  :kolombia,
+      version:              "0.1.0",
+      elixir:               "~> 1.8",
+      start_permanent:      Mix.env() == :prod,
+      deps:                 deps()
     ]
   end
 
@@ -22,7 +22,7 @@ defmodule Kolombia.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:grpc, github: "elixir-grpc/grpc"}
+      {:grpc,               github: "elixir-grpc/grpc"}
     ]
   end
 end

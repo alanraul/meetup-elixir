@@ -22,3 +22,10 @@ deps.update:
 	mix deps.clean --unused \
 	&& mix deps.get \
 	&& mix deps.compile
+
+##################################################################
+#### Test Commands
+##################################################################
+
+run:
+	mix run lib/kolombia/helper/hello.exs

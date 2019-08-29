@@ -30,3 +30,7 @@ use Mix.Config
 #     import_config "#{Mix.env()}.exs"
 
 config :grpc, start_server: true
+
+config :kolombia, :server,
+  host: System.get_env("GRPC_HOST"),
+  port: System.get_env("GRPC_PORT")
