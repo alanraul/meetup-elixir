@@ -12,4 +12,4 @@ export $(cat .env | xargs)
 
 ### Comandos útiles.
 
-- __make run__: ejecutar script de hello world.
+- __make run__: ejecuta script de hello world.
