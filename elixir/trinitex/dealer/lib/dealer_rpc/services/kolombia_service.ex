@@ -32,9 +32,4 @@ defmodule Dealer.Kolombia.Service do
 
     Reply.new(response: "El servidor recibió #{count} mensajes")
   end
-
-  @spec route_chat(map, GRPC.Channel.t) :: {:ok, Reply.Reply.t}
-  def route_chat(data, channel) do
-    Kolombia.Stub.record_route(channel, Request.new(data))
-  end
 end
