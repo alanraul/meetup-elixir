@@ -13,4 +13,4 @@ gen_proto.service:
 ##################################################################
 
 run:
-	mix run lib/kolombia/helper/hello.exs
+	mix run priv/scripts/run.exs

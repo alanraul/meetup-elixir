@@ -15,8 +15,18 @@ class KolombiaStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.HandleEvent = channel.unary_unary(
-        '/Kolombia/HandleEvent',
+    self.sendMessage = channel.unary_unary(
+        '/Kolombia/sendMessage',
+        request_serializer=request__pb2.Request.SerializeToString,
+        response_deserializer=reply__pb2.Reply.FromString,
+        )
+    self.ListNews = channel.unary_stream(
+        '/Kolombia/ListNews',
+        request_serializer=request__pb2.Request.SerializeToString,
+        response_deserializer=reply__pb2.Reply.FromString,
+        )
+    self.ListMessages = channel.stream_unary(
+        '/Kolombia/ListMessages',
         request_serializer=request__pb2.Request.SerializeToString,
         response_deserializer=reply__pb2.Reply.FromString,
         )
@@ -26,7 +36,21 @@ class KolombiaServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def HandleEvent(self, request, context):
+  def sendMessage(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListNews(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListMessages(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -36,8 +60,18 @@ class KolombiaServicer(object):
 
 def add_KolombiaServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'HandleEvent': grpc.unary_unary_rpc_method_handler(
-          servicer.HandleEvent,
+      'sendMessage': grpc.unary_unary_rpc_method_handler(
+          servicer.sendMessage,
+          request_deserializer=request__pb2.Request.FromString,
+          response_serializer=reply__pb2.Reply.SerializeToString,
+      ),
+      'ListNews': grpc.unary_stream_rpc_method_handler(
+          servicer.ListNews,
+          request_deserializer=request__pb2.Request.FromString,
+          response_serializer=reply__pb2.Reply.SerializeToString,
+      ),
+      'ListMessages': grpc.stream_unary_rpc_method_handler(
+          servicer.ListMessages,
           request_deserializer=request__pb2.Request.FromString,
           response_serializer=reply__pb2.Reply.SerializeToString,
       ),

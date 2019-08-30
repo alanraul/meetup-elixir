@@ -4,5 +4,7 @@ import "reply.proto";
 import "request.proto";
 
 service Kolombia {
-  rpc HandleEvent (Request) returns (Reply) {}
+  rpc sendMessage (Request) returns (Reply) {}
+  rpc ListNews(Request) returns (stream Reply) {}
+  rpc ListMessages(stream Request) returns (Reply) {}
 }

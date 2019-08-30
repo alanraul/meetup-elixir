@@ -8,7 +8,6 @@ defmodule Dealer.Application do
   import Supervisor.Spec
 
   def start(_type, _args) do
-    IO.inspect(System.get_env("GRPC_PORT"))
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: Sopi.Worker.start_link(arg)

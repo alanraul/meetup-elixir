@@ -3,4 +3,4 @@
 ##################################################################
 
 run:
-	mix run priv/scripts/hello.exs
+	mix run priv/scripts/run.exs

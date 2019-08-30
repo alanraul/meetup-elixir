@@ -23,7 +23,8 @@ defmodule Dealer.MixProject do
   defp deps do
     [
       {:grpc,                 github: "elixir-grpc/grpc"},
-      {:bisnex,               path: "../bisnex"}
+      {:bisnex,               path: "../bisnex"},
+      {:poison,               "~> 3.1"}
     ]
   end
 end

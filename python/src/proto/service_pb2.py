@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rservice.proto\x1a\x0breply.proto\x1a\rrequest.proto2-\n\x08Kolombia\x12!\n\x0bHandleEvent\x12\x08.Request\x1a\x06.Reply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rservice.proto\x1a\x0breply.proto\x1a\rrequest.proto2u\n\x08Kolombia\x12!\n\x0bsendMessage\x12\x08.Request\x1a\x06.Reply\"\x00\x12 \n\x08ListNews\x12\x08.Request\x1a\x06.Reply\"\x00\x30\x01\x12$\n\x0cListMessages\x12\x08.Request\x1a\x06.Reply\"\x00(\x01\x62\x06proto3')
   ,
   dependencies=[reply__pb2.DESCRIPTOR,request__pb2.DESCRIPTOR,])
 
@@ -39,12 +39,30 @@ _KOLOMBIA = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=45,
-  serialized_end=90,
+  serialized_end=162,
   methods=[
   _descriptor.MethodDescriptor(
-    name='HandleEvent',
-    full_name='Kolombia.HandleEvent',
+    name='sendMessage',
+    full_name='Kolombia.sendMessage',
     index=0,
+    containing_service=None,
+    input_type=request__pb2._REQUEST,
+    output_type=reply__pb2._REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ListNews',
+    full_name='Kolombia.ListNews',
+    index=1,
+    containing_service=None,
+    input_type=request__pb2._REQUEST,
+    output_type=reply__pb2._REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ListMessages',
+    full_name='Kolombia.ListMessages',
+    index=2,
     containing_service=None,
     input_type=request__pb2._REQUEST,
     output_type=reply__pb2._REPLY,

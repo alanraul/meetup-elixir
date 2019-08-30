@@ -2,7 +2,9 @@ defmodule Kolombia.Service do
   @moduledoc false
   use GRPC.Service, name: "Kolombia"
 
-  rpc :HandleEvent, Request, Reply
+  rpc :sendMessage, Request, Reply
+  rpc :ListNews, Request, stream(Reply)
+  rpc :ListMessages, stream(Request), Reply
 end
 
 defmodule Kolombia.Stub do

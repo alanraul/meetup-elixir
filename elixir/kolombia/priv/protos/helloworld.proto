@@ -9,5 +9,5 @@ message Reply {
 }
 
 service Kolombia {
-  rpc HandleEvent (Request) returns (Reply) {}
+  rpc SendMessage (Request) returns (Reply) {}
 }

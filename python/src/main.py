@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 """The Python implementation of the GRPC client."""
 
 import grpc
@@ -10,7 +13,7 @@ def run():
         stub = service_pb2_grpc.KolombiaStub(channel)
         request = request_pb2.Request(message='Hola mundo')
 
-        return stub.HandleEvent(request)
+        return stub.sendMessage(request)
 
 def _host():
     return '%s:%s' % (os.environ['GRPC_HOST'], os.environ['GRPC_PORT'])
